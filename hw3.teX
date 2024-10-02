@@ -1,0 +1,180 @@
+\documentclass[10pt, AMS Euler]{article}
+\textheight=9.25in \textwidth=7in \topmargin=-.75in
+\oddsidemargin=-0.25in
+\evensidemargin=-0.25in
+\usepackage{url}  % The bib file uses this
+\usepackage{graphicx} %to import pictures
+\usepackage{amsmath, amssymb, multicol}
+\usepackage{theorem, concrete}
+
+
+\setlength{\intextsep}{5mm} \setlength{\textfloatsep}{5mm}
+\setlength{\floatsep}{5mm}
+
+
+{\theorembodyfont{\rmfamily}
+	\newtheorem{definition}{Definition}[section]}
+{\theorembodyfont{\rmfamily} \newtheorem{example}{Example}[section]}
+{\theorembodyfont{\rmfamily} \newtheorem{lemma}{Lemma}[section]}
+{\theorembodyfont{\rmfamily} \newtheorem{theorem}{Theorem}[section]}
+{\theorembodyfont{\rmfamily} \newenvironment{proof}{\par{\it
+			Proof:}}{\nopagebreak[4]\rule{2mm}{2mm}}}
+
+
+
+%%%%  SHORTCUT COMMANDS  %%%%
+\newcommand{\ds}{\displaystyle}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\arc}{\rightarrow}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%  footnote style %%%%
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{empty}
+\begin{document}
+		
+\noindent{\bf Homework \#3:}   
+Please respond to as many of the prompts below as you can, and please attempt to precisely and fluently kick their trash.\\
+\noindent{\bf Rylei Mindrum | A02352206} \\
+\noindent\rule{\textwidth}{0.4pt}
+    \begin{enumerate}
+	\item Please prove that the sets $E = \{\mbox{even integers}\}$, $\N$, and $\Z$ are infinite sets and that they have the same cardinality.
+        \item[\bf{Claim}]: The sets $E = \{\mbox{even integers}\}$, $\N$, and $\Z$ are infinite sets and all have the same cardinality.
+            \begin{proof}
+                \item[\bf{Proof}:]
+                    First I will start by defining pieces of the statement above. 
+                    \begin{itemize}
+                        \item Cardinality - (set theory) Of a set, the number of elements it contains. (from Wiktionary)
+                        \item Bijection - function that is a one-to-one mapping of sets. Has to satisfy Injection and Surjection. 
+                        \item An Infinite Set can be defined as "not finite." Meaning that its elements can't be counted in a set amount of time or to a specific equivalency.
+                        \item The Set of Even Integers, $E = \{\mbox{...,-4,-2,0,2,4,...}\}$, can be written as for every integer $\emph{k} \in \Z$ an even integer exists for \emph{2k}. And since the set of integers has been defined as infinite, every integer can be paired with it own unique even integer, so the set of $\emph{E}$ must also be infinite. 
+                        \item Natural Numbers $\N$, $N = {1,2,3,..}$ is infinite by definition, and wikipedia, They are countably infinite because we can list them in a sequence without any end. 
+                        \item Integers $\Z$, $Z = {...,-2,-1,0,1,2,...}$ is also infinite because for any integer \emph{k}, there exists an integer for \emph{k}+1. This shows that there is no largest element. Similar to natural number the integers are countably infinite.
+                    \end{itemize}  
+                    Now that the pieces of the equation are explained in their own definitions, I will prove that the cardinality of $\emph{E}, \N, and \Z$ is all the same. I will do this by using bijection. 
+                    \begin{itemize}
+                        \item Bejection between $\N$ and $\emph{E}$:
+                        \begin{itemize}
+                            \item Consider f : $\N -> \emph{E}$ defined by $f(n) = 2n$. This function will map each natural number (defined as n) to and even number (2n).
+                            \\ Based on the definition of bijection the function has to also satisfy bijectioin and surjection which I will complete below:
+                            \item Injection: If $f(n_{1} = f(n_{2}$, then $2n_{1} = 2n_{2}$ which implies that $n_{1} = n_{2}$. Making f injective. 
+                            \item Subjection: For every integer m in the set of \emph{E} there is a natural number $n = \emph{m}/2$ such that $f(\emph{n}) = \emph{m}$. making f surjective. 
+                        \end{itemize}   
+                    \end{itemize}
+                    since $\emph{f}$ if injective and subjective, it can be defined as a bijection. So, $\N$ and $\emph{E}$ have the same cardinality. \\
+                    Now I will show that there is also bijection between $\N$ and $\Z$. 
+                    \begin{itemize}
+                        \item bijection between $\N$ and $\Z$:
+                        \begin{itemize}
+                            \item For the function $g : \N -> \Z$ we define:
+                            \begin{center}
+                                $g(\emph{n}) = \{{\emph{n}/2 \atop -(\emph{n}-1)/2}$
+                            \end{center}
+                            \item with the top being if \emph{n} is even and the bottom if \emph{n} is odd. 
+                            \item The purpose of the function is to map each natural number (\emph{n}) to integer (\z) which should alternate between being positive and negative. 
+                            \item Like before we have to show injective and surjective. starting with surjective: So, if $g(n_{1}) = g(n_{2})$, the cases can be distinguished based on whether $n_{1} and n_{2}$ are even or odd. In any case equality will imply that $n_{1} = n_{2}$. Meaning that g is injective. 
+                            \item Now for Surjective: That is for any integer z in the set of $\Z$ we can find an n in the set of $\N$ so that g(n) = z. For example cause thats a confusing sentence:
+                            \begin{itemize}
+                                \item if $z >= 0$, then $n = 2z$.  Or if $z < 0$ then $n = -2z-1$. 
+                            \end{itemize}
+                            \item this showcases g as surjective so it is bijective. meaning that $\N$ and $\Z$ has the same cardinality. 
+                        \end{itemize}   
+                        \item[\bf{Conclusion}:]
+                        Since $\N$ has the same cardinality as both $\emph{E}$ and $\Z$, proven by the bijections, I know that $\emph{E}$, $\Z$, and $\N$ all have the same cardinality. Shows as $|\emph{E}| = |\Z| = |\N|$ Meaning that all of the infinite sets have the same cardinality.
+                    \end{itemize}
+            \end{proof} \\
+\noindent\rule{\textwidth}{0.4pt}
+	\item Please prove that the set $(0,1) = \{x \in \R: 0 < x < 1\}$ is infinite, but does not have the same cardinality as $\N$ (and hence not the same as $E$ and $\Z$).
+        \item[\bf{Claim}]: The set $(0,1) = {\emph{x} \in \R : 0 < x < 1}$ is infinite but does not have the same cardinality as $\N$ and also does not have the same cardinality as $\emph{E}$ or $\Z$. 
+            \begin{proof}
+                \item[\bf{Proof}:]
+                    First I will start by defining (0,1): 
+                    \begin{itemize}
+                        \item The set (0,1) is all of the real numbers between 0 and 1 excluding the endpoints. There is no smallest or largest number cause for all real numbers in the set there will always be one in-between. (EX: 0.2 and 0.3 -> 0.25) This showcases that the set (0,1) is not infinite. even though you know the numbers are there, this set is still unaccountably infinite which I will show below:
+                        \begin{itemize}
+                            \item To show that the set (0,1) is unaccountably infinite I will use Cantor's Diagonalization Argument which proves that the set of numbers between 0,1 is unaccountably infinite while $\N$ is countably infinite. 
+                            \item To prove Cantors's I am going to use contradiction with bijection. With bijection f : N $-> (0,1)$ would mean that we could list all the real numbers in (0,1) as f(s), f(2), f(3), etc...
+                            \item I will have each number in (0,1) be represented by its decimal expansion where $a_{i,j}$ represents the j-th digit in the decimal expansion of the real number defined as f(i):
+                            \begin{itemize}
+                                \item $f(1) = 0.a_{1,1}, a_{1,2}, a_{1,3}, a_{1,4}, etc....$
+                                \item $f(2) = 0.a_{2,1}, a_{2,2}, a_{2,3}, a_{2,4}, etc....$
+                                \item $f(3) = 0.a_{3,1}, a_{3,2}, a_{3,3}, a_{3,4}, etc....$
+                            \end{itemize}
+                            \item Now I am going to make a new real number with a different decimal expansion than the previous. For this I am going to use n so its not random abritrary numbers. I was to ensure that the the new number differes from f(n) in the n-th digit for all n in $\N$. Which will show that r cant be on the list which contradicts f being a bijection and hence means that (0,1) does not have the same cardinality as $\N$. Shown below:
+                            \begin{itemize}
+                                \item $r_{\emph{n}} = \{{1 if a_{n,n} != 1 \atop 2 if a_{n,n,} = 1}$
+                            \end{itemize}
+                            \item Now I need to make sure that the cardinality of (0,1) is greater than $\N$. $\N$ is countably infinitewhile (0,1) is uncountably infinite. The cardinality of (0,1) is also greater than the cardinality of $\N$. since the cardinality of (0,1) is greater than the cardinality of $\N$ then $\N != (0,1)$. (Not the same)
+                        \end{itemize}
+                    \end{itemize}
+            \end{proof}
+        \item[\bf{Conclusion}:] The set (0,1) is infinite but doesn't have the same cardinality as $\N$, $\emph{E}$, and $\Z$ which are countably infinite. While (0,1) is uncountably infinite. \\
+\noindent\rule{\textwidth}{0.4pt}
+        \item Recall $\implies, \vee, \wedge,$ and $\nabla$ are binary logical operations on $\mathcal{M}$ we've studied. Recall $\neg$ is a (the only) logical \emph{operator} (or \emph{unary operation}) on $\mathcal{M}$ we've studied. Please determine, with justification, the number of different binary logical operations on $\mathcal{M}$ there can be. Also, determine the number of logical operators there can be.  
+        \item[\bf{Claim}]: The set $\mathcal{M} = {0,1}$ has 16 possible binary logical operations and 4 possible unary logical operations. 
+            \begin{proof}
+                \begin{itemize}
+                    \item The amount of different binary logical operations on $\mathcal{M}$ can be found with understanding the following:
+                    \item A Binary Logical Operation takes two elements for the set $\mathcal{M}$ as inputs and produces a single output (also from $\mathcal{M}$). To find the number of operations we need to look at the function mappings for all the possible input pairs from $\mathcal{M}*\mathcal{M}$ to $\mathcal{M}$. First we will look at the input possibilities.
+                    \begin{itemize}
+                        \item If $\mathcal{M}$ has n elements, a binary operation requires a decision for each pair of inputs. Referring to positive and negative integers. so, the distinct number of input pairs can be defined using absolute values: $|\mathcal{M}| * |\mathcal{M}| = n^{2}$. I can do this because even if the input number is negative, a negative times a negative will still be a positive so this is a legal change. 
+                        \item now I will show the Output possibilities for every pair of $\mathcal{M} * \mathcal{M}$ the operation has to produce an output in $\mathcal{M}$. And for each pair there are n possible outputs. 
+                        \item So, since there are n possible outputs for each of the $n^{2}$ input pairs. Meaning that the total number of binary operations is $n^{n^{2}}$.
+                        \item And Looking at the binary logical operations that we can take from the last question ( (0,1) ), $\mathcal{M} = 2^{2^{2}}$ which becomes, $2^{4}$. Then, 16. So, the number of logical binary operations on the set {0,1} is equal to 16. The operations include $\wedge$, $\vee$, $\implies$, $\longleftrightarrow$, and others. 
+                    \end{itemize}
+                    \item Now I will show how to get the unary logical operation on $\mathcal{M}$. a unary logical operation is defined as taking a single element from $\mathcal{M}$ as input and producing a single element from $\mathcal{M}$ as an output. so, basically one in one out. 
+                        \begin{itemize}
+                            \item First lets look at the input possibilities. If $\mathcal{M}$ has n elements, the operation needs to map each n input to an output in $\mathcal{M}$.
+                            \item And now the output possibilities. For each input there is n possible outputs. the result has to be in $\mathcal{M}$.
+                            \item Combining these two to find the total unary operators we get $n^{n}$. This is cause there are n outputs possible for each of n inputs. 
+                            \item Similar to the logical operators will will use the set {0,1} on $\mathcal{M}$ to get $2^{2}$. Which will be equal to 4. I will show them below:
+                            \begin{itemize}
+                                \item The identity operation: id(x) = x
+                                \item The negation operation: $\neg 0 = 1 and \neg 1 = 0$
+                                \item A Constant operation that always returns 0: f(x) = 0 for all x in the set of $\mathcal{M}$
+                                \item and a constant operation that always returns 1: f(x) = 1 for a x in the set $\mathcal{M}$.
+                            \end{itemize}
+                        \end{itemize}
+                \end{itemize}
+            \end{proof}
+        \item[\bf{Conclusion}:] The number of binary logical operations on $\mathcal{M} = {0,1} is 16$ and the number of different unary logical operations on $\mathcal{M} = {0,1} is 4$\\
+\noindent\rule{\textwidth}{0.4pt}
+	\item Turn the logical system $(\mathcal{M}, \Phi, \wedge, \vee, \implies, \Longleftarrow, \Longleftrightarrow, \neg)$ into a purely algebraic system over $(\Z_2, +,\cdot)$ with, for $x \in \mathcal{M}$, $\Phi(x) = 0$ if $x$ is true and $\Phi(x) = 1$ if $x$ is false. Use the logical system to show that any statement of the form $[\neg P \wedge ((\neg P \implies Q) \wedge \neg Q)] \implies P$ is a tautology.
+        \item[\bf{Claim}]: The logical statement $[\neg P \wedge ((\neg P \implies Q) \wedge \neg Q)] \implies P$ is a tautology (always true regardless of the truth values of $\P$ and $\Q$ when translated into an algebraic system over $\Z_{2}$
+            \begin{proof}
+                To begin proving this the first thing that I will do is map the logical operations to algebraic ones in $\Z_{2}$. 0 is true 1 is false. 
+                \begin{itemize}
+                    \item Beginning with Negation ($\neg$P). Negation P is the complement to $\Z_{2}$. For any $\P$ in the set of $\mathcal{M}$, and true of false/vise-versa. The algebraic definition $\neg$P = 1 + P (mod 2)
+                    \item And Conjunction $(P \wedge Q)$ which is equivalent to multiplication. So, for any $P, Q, \in \mathcal{M}: P \wedge \Q = P * Q$.
+                    \item Dis-junction $(P \vee Q)$ is equivalent to addition, (P+Q)
+                    \item Implication $(P \implies Q)$ is equal to $\neg P \vee Q$. Which is $1 + P + P * Q$.
+                    \item Biconditional $(P \Longleftrightarrow Q)$translates to $1 + P + Q$ (mod 2)
+                \end{itemize}
+                Now that the logical system is in algebraic terms we are going to prove the tautology. I am gonna translate and simplify the statement into the logical equivalent.
+                \begin{itemize}
+                    \item $\neg$P becomes 1 +P
+                    \item $\neg P \implies Q$ becomes $1 + (1 + P) + (1 + P) * Q$ which equals $P + P * Q$
+                    \item $\neg$Q becomes 1 + Q
+                    \item P stays as P
+                \end{itemize}
+                So, $[\neg P \wedge ((\neg P \implies Q) \wedge \neg Q)] \implies P$ becomes $[(1 + P) * ( P + P * Q) * (1 + Q)] \implies P$ \\
+                Now I expand this...
+                \begin{itemize}
+                    \item $(1 + P) * ( P + P * Q)$ becomes $P + P * Q + P * (P + P * Q)$ then $ P + P * Q$
+                    \item (Note: P * P = P and P * P * Q = P * Q)
+                    \item And Multiply by 1 + Q... $P + P * Q) * (1 * Q) = P * (1 + Q) + P * Q * (1 + Q) = P + P * Q + P * Q * (1 + Q)$. Since P * Q * (1 + Q) = 0, (cause Q * (1 + Q) = 0 in $\Z_{2}$) it becomes P + P * Q.
+                    \item so next we do the implication for (P + P * Q) implies P.
+                    \begin{itemize}
+                        \item First we must note that the algebraic form of implication A implies B is 1 + A + A * B. 
+                        \item Applying it we get (P + P * Q) implies P = 1 + (P + P + Q) + (P + P * Q) which expands to become: 1 + P + P * Q + (P + P * Q) * P = 1 + P + P * Q + P + P * Q which equals 1. (cause P + P = 0 and P * Q + P * Q = 0)
+                    \end{itemize}
+                \end{itemize}
+            \end{proof} \\
+        \item[\bf{Conclusion}:] So, the final expression being equal to 1 proves that the original value is always true no matter what the arbitrary values of P and Q are.  \\
+\noindent\rule{\textwidth}{0.4pt}
+    \end{enumerate}	
+\end{document} 
